@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // Grocery List Manager
+        const grocery = ["rice", "beans"];
+        grocery.push("yam", "garri");
+        grocery.unshift("salt");
+        console.log(grocery);
+        grocery.pop("");
+        console.log(grocery.pop());
+
+
+        // The Class Register
+        const students = ["David", "Aisha", "David", "Tolu", "David"];
+        let position = students.indexOf("David");
+        let positions = students.lastIndexOf("David") + 1;
+        students.includes("Aisha");
+        console.log(students.includes());
+        console.log(students.indexOf());
+
+
+        // Slice - No Damage
+        const nums = [100, 200, 300, 400, 500, 600];
+        let num = nums.slice(1, 4);
+        console.log(nums.slice());
+        console.log(nums);
+        // The result did not change.
+
+
+        // Splice - Real Damage
+        const towns = ["Ikeja", "Lekki", "Ibadan", "Osogbo", "Abuja"];
+        let city = towns.splice(2, 2);
+        towns.splice(2, 0, "Ogbomoso", "Ilorin");
+        console.log(towns);
+
+
+        // Search & Delete
+        const cart = ["phone", "charger", "powerbank", "cable",];
+        cart.indexOf("powerbank")
+        console.log(cart.indexOf())
+        cart.splice(2, 1);
+        console.log(cart);
+
+
+        // Join the Sentence
+        const words = ["Javascript", "is", "very", "easy"];
+        console.log(words.join(" "))
+        console.log(words.join("-"))
+        words.toString();
+        console.log(words)
+
+
+        // The Guest Check
+        const invited = ["Sola", "Tunde", "Bisi"];
+        const newGuest = "Kunle";
+
+        if (!invited.includes(newGuest)){
+            invited.push(newGuest)
+        }
+        console.log(invited)
+
+
+        // Find the Product (Object search)
+        const products = [
+            {id: 1, name: "Shoe", price: 5000},
+            {id: 2, name: "Bag", price: 3000},
+            {id: 3, name: "Cap", price: 1500}
+        ];
+        let product = products.find(item => item.id === 2);
+        console.log(product);
+
+
+        // Clean and Merge
+        const a = ["a", "b", "c"];
+        const b = ["d", "e"];
+        a.pop("c");
+        const sentences = a.concat(b);
+        console.log(sentences)
+
+
+        // Final Boss - Correct the mistake
+        const sentence = ["I", "am", "learing", "JavaScript"];
+        sentence.indexOf("learing")
+        console.log(sentence.indexOf())
+        sentence.splice(2, 1, "learning");
+        sentence.push("today");
+        console.log(sentence.join(" "))
+
+    </script>
+</body>
+</html>
